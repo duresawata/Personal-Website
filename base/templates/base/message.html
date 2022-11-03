@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Duresa Wata</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+</head>
+<body>
+    <br>
+	<div class="container">
+        <div class="row">
+            {% if message_name %}
+            <center>
+                <a href="/"> 🠔 Back to Home</a>
+                <h2>Thanks {{message_name}}!</h2>
+                <p>We received your email and will respond shortly.</p>
+            </center>
+            {% endif %}
+        </div>
+	</div>
+</body>
+</html>
