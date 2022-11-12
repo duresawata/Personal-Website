@@ -17,10 +17,10 @@ def contact(request):
 
         # send an email
         send_mail(
-            message_subject,  # subject
-            message,  # message
-            message_email,  # from email
-            ['duresakorroso2019@gmail.com'],  # to email
+            subject=message_subject,  # subject
+            message=message,  # message
+            from_email=message_email,  # from email
+            recipient_list=['duresakorroso2019@gmail.com'],  # to email
         )
         return render(request, 'base/message.html', {'message_name': message_name})
     return render(request, 'base/home.html', {})
