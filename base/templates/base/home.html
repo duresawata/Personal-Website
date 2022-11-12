@@ -1,110 +1,166 @@
-
+{% extends "base/main.html" %}
 {% load static %}
+{% block content %}
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Duresa Wata</title>
-	<link href="{% static '/css/main.css'  %}" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	
-</head>
-<body>
-	<br>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3">
-				<div class="card card-body h-100  border-info" id="profile-wrapper">
-					<img id="profile-pic" src="{% static 'images/duresa.jpg' %}" >
-					<hr>
-					<h4>Hi I'm Duresa!</h4>
-					<p>I love coding, doing research and collaborating</p>
-				</div>
-			</div>
+<!-- navbar start -->
+<nav class="navbar navbar-light bg-light shadow-sm">
+	<div class="container-lg">
+		<a href="#" class="navbar-brand text-danger fw-bold fs-4">Duresa W.</a>
+		<div class="dropdown">
+			<button type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-danger px-3"><i class="fa fa-bars"></i></button>
+			<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+				<li><a class="dropdown-item" href="#home">Home</a></li>
+				<li><a class="dropdown-item" href="#about">About</a></li>
+				<li><a class="dropdown-item" href="#services">Services</a></li>
+				<li><a class="dropdown-item" href="#portfolio">Portfolio</a></li>
+				<li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+				<li><a class="dropdown-item" href="#contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- navbar end -->
 
-			<div class="col-md-9">
-				<div class="card card-body h-100  border-info">
-					<h4>Full-Stack Python Developer</h4>
-					<hr>
-					<p>Full stack developer well-versed in backend. I prefer to stay up to date with the whole development process from database structure and server infrastructure to mobile responsive views and analytics.</p>
-					<p>
-					Moreover, I dive deep into company business processes and I won't hesitate to suggest any ideas aimed to improve it from the development side.</p>
-					<p>
-					I'm inspired to write clean and manageable code. I enjoy teamwork with developer colleagues through pull requests and team chats. I'm always online to provide urgent solutions when needed including weekends.
-					</p>
-
-					<ul class="social-links">
-						<li><img class="social" src="{% static 'images/facebook.png' %}"></li>
-						<li><img class="social" src="{% static 'images/linkedin.png' %}"></li>
-						<li><img class="social" src="{% static 'images/twitter.png' %}"></li>
-						<li><img class="social" src="{% static 'images/youtube.png' %}"></li>
-					</ul>
-
+<!-- portfolio start -->
+<section class="portfolio py-5" id="portfolio">
+	<div class="container-lg py-4">
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<div class="section-title text-center">
+					<h2 class="fw-bold mb-4">Recent Works</h2>
 				</div>
 			</div>
 		</div>
-		<br>
 		<div class="row">
-			<div class="col-md-6">
-				<div class="card card-body h-100">
-					<h5>My Experience as a Developer</h5>
-					<hr>
-					<p>Full stack developer at Leadstar Academy.</p>
-					<p>Designed, built and managed learning managment system as a sole developer. System supported thousands of students with a UI for LMS Admins and a student dashboard.</p>
+			<div class="col-md-6 col-lg-4">
+				<div class="portfolio-item">
+					<img src="{% static 'images/placeholder.jpg' %}" class="w-100 img-thumbnail" alt="portfolio item">
+					<h3 class="text-capitalize fs-5 my-2">team Section</h3>
+					<p class="mb-4"><a class="text-decoration-none text-warning" href="#">Live Demo</a></p>	 
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4">
+				<div class="portfolio-item">
+					<img src="{% static 'images/placeholder.jpg' %}" class="w-100 img-thumbnail" alt="portfolio item">
+					<h3 class="text-capitalize fs-5 my-2">team Section</h3>
+					<p class="mb-4"><a class="text-decoration-none text-warning" href="#">Live Demo</a></p>	 
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-4">
+				<div class="portfolio-item">
+					<img src="{% static 'images/placeholder.jpg' %}" class="w-100 img-thumbnail" alt="portfolio item">
+					<h3 class="text-capitalize fs-5 my-2">team Section</h3>
+					<p class="mb-4"><a class="text-decoration-none text-warning" href="#">Live Demo</a></p>	 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- portfolio end -->
+<!-- freelancer start -->
+<section class="freelancer-available py-5 bg-danger">
+	<div class="container-lg py-4">
+		<div class="row justify-content-center">
+			<div class="col-lg-8 text-center">
+				<p class="text-light fs-5">Do you have any project ?</p>
+				<h2 class="fs-1 text-white mb-4">I'm Available for Freelancer Projects</h2>
+				<a class="btn btn-outline-light" href = "https://www.upwork.com/users/~01edaa0e6e1596d54a" target="_blank">Hire Me <i class="fa-solid fa-up-right-from-square"></i></a>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- freelancer end -->
+
+<!-- contact start -->
+<section class="contact py-5" id="contact">
+	<div class="container-lg py-4">
+		<div class="row justify-content-center">
+			<div class="col-lg-8">
+				<div class="section-title text-center">
+					<h2 class="fw-bold mb-4">Contact Me</h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5">
+				<div class="contact-item d-flex mb-3">
+					<div class="icon fs-4 text-danger">
+						<i class="fas fa-envelope"></i>
 					</div>
-			</div>
-
-			<div class="col-md-6">
-				<div class="card card-body h-100">
-					<h5>What I Know</h5>
-					<hr>
-					<p>Python, Django, HTML/CSS, JavaScript/Jquery, React, Postgres, AWS and APIs such as google maps, JavaScript charts and a whole bunch more I can’t possibly mention in one sentence! ;)</p>
-					<p>PS: Working on Django, React and Ecommerce Website.</p>
+					<div class="text ms-3">
+						<h3 class="fs-5">Email</h3>
+						<p class="text-muted">duresawata21@gmail.com</p>
+					</div>
+				</div>
+				<div class="contact-item d-flex mb-3">
+					<div class="icon fs-4 text-danger">
+						<i class="fas fa-phone"></i>
+					</div>
+					<div class="text ms-3">
+						<h3 class="fs-5">Phone</h3>
+						<p class="text-muted">+251-996-529-960</p>
+					</div>
+				</div>
+				<div class="contact-item d-flex mb-3">
+					<div class="icon fs-4 text-danger">
+						<i class="fas fa-map-marker-alt"></i>
+					</div>
+					<div class="text ms-3">
+						<h3 class="fs-5">Address</h3>
+						<p class="text-muted">Adama, Ethiopia</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="card card-body h-100">
-					<h5>How I Learn</h5>
-					<hr>
-					<p>Reverse Engineer & Build Ugly Prototypes First.</p>
-
-					<p>I can learn just about anything by having a final product to tear apart piece by piece. I break the code where I need to figure out why things work the way they do. Documentation is just a reference.</p>
-				</div>
-			</div>
-
-			<div class="col-md-6">
-				<div class="card card-body h-100">
-					<h5>My Short Term Goals</h5>
-				<hr>
-				<p>Aside from building small projects I would love to enter a position where I can be part of a bigger team & learn from others with more experience than myself.</p>
-
-				</div>
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			<div class="col-md-6">
-				<div class="card card-body h-100">
-					<h3>Send Message</h3>
+			<div class="col-md-7">
+				<div class="contact-form">
 					<form action="{% url 'contact' %}" method="post">
 						{% csrf_token %}
-						<label for="name">Name</label>
-						<input type="text" class="form-control" name="message-name" placeholder="Your Name...">
-						<label for="email">Email</label>
-						<input type="email" class="form-control" name="message-email" placeholder="Your Email...">
-						<label for="message">Message</label>
-						<textarea name="message" class="form-control mb-3" cols="30" rows="10" placeholder="Message body..."></textarea>
-						<button class="btn btn-primary">Submit</button>
+						<div class="row">
+							<div class="col-lg-6 mb-4">
+								<input type="text" placeholder="Your Name" name="message-name" class="form-control form-control-lg fs-6 border-0 shadow-sm">
+							</div>
+							<div class="col-lg-6 mb-4">
+								<input type="email" placeholder="Your Email" name="message-email" class="form-control form-control-lg fs-6 border-0 shadow-sm">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 mb-4">
+								<input type="text" placeholder="Subject" name="message-subject" class="form-control form-control-lg fs-6 border-0 shadow-sm">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12 mb-4">
+								<textarea rows="5" placeholder="Your Message" name="message" class="form-control form-control-lg fs-6 border-0 shadow-sm"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<button type="submit" class="btn btn-danger px-3">
+									Send Message
+								</button>
+							</div>
+						</div>
 					</form>
 				</div>
 			</div>
 		</div>
-		<br>
 	</div>
+</section>
+<!-- contact end -->
 
+<!-- footer start -->
+<footer class="bg-dark text-white py-4">
+	<div class="container-lg">
+		<div class="row">
+			<div class="col-lg-12">
+				<p class="m-0 text-center">
+					&copy; 2022 
+					<a class="text-warning text-decoration-none" href="/">Duresa W.</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- footer end -->
+{% endblock content %}
 
-</body>
-</html>

@@ -11,12 +11,13 @@ def home(request):
 def contact(request):
     if request.method == "POST":
         message_name = request.POST['message-name']
+        message_subject = request.POST['message-subject']
         message_email = request.POST['message-email']
         message = request.POST['message']
 
         # send an email
         send_mail(
-            message_name,  # subject
+            message_subject,  # subject
             message,  # message
             message_email,  # from email
             ['duresakorroso2019@gmail.com'],  # to email
