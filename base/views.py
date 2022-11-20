@@ -22,8 +22,8 @@ def contact(request):
             message_subject,  # subject
             message_body,  # message
             name,
-            message_email,  # from_email
-            ['duresakorroso2019@gmail.com'],  # recipient_list
+            from_email=message_email,  # from email
+            recipient_list=['duresakorroso2019@gmail.com'],  # to email
         )
         context = {
             'message_name': message_name,
