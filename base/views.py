@@ -20,7 +20,7 @@ def contact(request):
             subject=message_subject,  # subject
             message=message,  # message
             from_email=message_email,  # from email
-            recipient_list=['duresawata21@gmail.com'],  # to email
+            recipient_list=['duresakorroso2019@gmail.com'],  # to email
         )
         return render(request, 'base/message.html', {'message_name': message_name})
     return render(request, 'base/home.html', {})
