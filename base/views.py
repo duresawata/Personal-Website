@@ -15,7 +15,7 @@ def contact(request):
         message_email = request.POST['message-email']
 
         message = request.POST['message']
-        message_body = f"FROM: {message_email}\nNAME: {message_name}\n\n{message}"
+        message_body = f"FROM: {message_email}\nName: {message_name}\n\n{message}"
         # send an email
         send_mail(
             subject=message_subject,  # subject
